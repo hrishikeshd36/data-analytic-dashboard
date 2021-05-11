@@ -30,7 +30,7 @@ section {
   background: var(--orange) url("./bg1.jpg");
   background-size: cover;
   height: 100%;
-  background-position: -330px 50px;
+  background-position: -320px;
   background-blend-mode: screen;
   padding: 2em;
   border-radius: 13px;
@@ -151,4 +151,58 @@ nav ul li a:hover {
 }
 .active:hover {
   background: #ff7e52;
+}
+
+/* Tablet */
+@media only screen and (min-width: 700px) {
+  .left-col {
+    display: flex;
+  }
+
+  .content p {
+    width: 70%;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 880px) {
+  nav {
+    position: unset;
+    transform: translateX(0) !important;
+    height: 100%;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+  }
+
+  .menu-btn,
+  .btn-back {
+    display: none;
+  }
+
+  ul {
+    margin-top: 4em;
+  }
+
+  header {
+    padding: 1.6em;
+  }
+
+  .container {
+    display: flex;
+    padding: 2em;
+  }
+
+  section {
+    border-radius: unset;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    background-size: cover;
+    background-position: 0;
+    background-attachment: unset;
+  }
+  .content {
+    justify-self: left;
+    margin-left: 4em;
+  }
 }
