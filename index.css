@@ -11,10 +11,11 @@
 :root {
   --orange: #ff6631;
   --blue: #021433;
+  --bg-color: #f4bb8c;
 }
 
 body {
-  background: var(--blue);
+  background: var(--bg-color);
   height: 100vh;
   background-attachment: fixed;
   font-family: "Poppins";
@@ -32,10 +33,7 @@ section {
   background-position: -330px 50px;
   background-blend-mode: screen;
   padding: 2em;
-}
-
-nav {
-  display: none;
+  border-radius: 13px;
 }
 
 .logo {
@@ -104,4 +102,53 @@ h1 {
 
 .cta:hover {
   background-color: white;
+}
+
+/*  NAV */
+nav {
+  position: fixed;
+  z-index: 999;
+  background: var(--blue);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: 300px;
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
+
+nav ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.875em 5em 0.875em 4em;
+  display: block;
+}
+
+nav ul li a:hover {
+  background: #081f46;
+}
+
+.btn-back {
+  padding: 3em 4em 2em;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+.btn-back:hover {
+  transform: translateX(-10px);
+}
+
+.active {
+  background: #ff6631;
+}
+.active:hover {
+  background: #ff7e52;
 }
